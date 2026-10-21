@@ -11,9 +11,9 @@ namespace AppTask.Controllers
 {
     public class TarefaController : Controller
     {
-        private readonly DbTasksContext _context;
+        private readonly DbTasksColegaContext _context;
 
-        public TarefaController(DbTasksContext context)
+        public TarefaController(DbTasksColegaContext context)
         {
             _context = context;
         }

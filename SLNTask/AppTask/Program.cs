@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<DbTasksContext>(options =>
+// Corrigido para utilizar o DbTasksColegaContext
+builder.Services.AddDbContext<DbTasksColegaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoSqlServer")));
 
 var app = builder.Build();
