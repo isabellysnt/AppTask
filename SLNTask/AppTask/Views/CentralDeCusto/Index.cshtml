@@ -13,8 +13,8 @@
 <table class="table table-striped table-hover">
     <thead class="table-dark">
         <tr>
-            <th>Descrição</th>
-            <th>Código de Custo</th>
+            <th>Nome Central</th>
+            <th>Valor Meta Anual</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -22,8 +22,8 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Descricao</td>
-                <td>@item.CodigoCusto</td>
+                <td>@item.NomeCentral</td>
+                <td>@item.ValorMetaAnual</td>
                 <td>
                     <a href="/CentralDeCusto/Edit/@item.Codigo" class="btn btn-primary btn-sm">Editar</a> |
                     <a href="/CentralDeCusto/Details/@item.Codigo" class="btn btn-info btn-sm text-white">Detalhes</a> |
@@ -32,7 +32,7 @@
                             data-bs-toggle="modal"
                             data-bs-target="#deleteModal"
                             data-id="@item.Codigo"
-                            data-descricao="@item.Descricao">
+                            data-descricao="@item.NomeCentral">
                         Excluir
                     </button>
                 </td>
@@ -41,7 +41,6 @@
     </tbody>
 </table>
 
-<!-- Modal de Confirmação de Exclusão -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

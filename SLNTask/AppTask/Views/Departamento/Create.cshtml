@@ -12,13 +12,13 @@
             @Html.AntiForgeryToken()
 
             <div class="mb-3">
-                <label for="Nome" class="form-label fw-bold">Nome do Departamento</label>
-                <input type="text" id="Nome" name="Nome" class="form-control" required />
+                <label for="Descricao" class="form-label fw-bold">Descrição</label>
+                <input type="text" id="Descricao" name="Descricao" class="form-control" required />
             </div>
 
-            <div class="mb-3">
-                <label for="Sigla" class="form-label">Sigla</label>
-                <input type="text" id="Sigla" name="Sigla" class="form-control" />
+            <div class="mb-3 form-check">
+                <input type="checkbox" id="Ativo" name="Ativo" class="form-check-input" value="true" />
+                <label for="Ativo" class="form-check-label">Ativo</label>
             </div>
 
             <div class="mb-3 d-flex gap-2">
